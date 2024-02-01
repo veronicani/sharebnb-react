@@ -1,6 +1,13 @@
 import "./AddPropertyForm.css";
 import { useState } from "react";
-
+const INITIAL_FORM_DATA = {
+  name: "",
+  address: "",
+  description: "",
+  price: 0,
+  backyard: false,
+  pool: false,
+};
 /** Form to add property.
  *
  * Props:
@@ -13,28 +20,31 @@ import { useState } from "react";
  */
 
 function AddPropertyForm({ addProperty }) {
-  const initialData = {
-    name: "",
-    address: "",
-    description: "",
-    price: 0,
-    backyard: "",
-    pool: "",
-  };
-
-  const [formData, setFormData] = useState(initialData);
-
-  /** */
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+  const [file, setFile] = useState(null);
+  console.debug("formData state=", formData,
+                "file state=", file,
+  )
+  /** Update form input fields */
   function handleChange(evt) {
+    const { name, value } = evt.target;
+    setFormData(fData => ({ ...fData, [name]: value }));
+  }
+
+  /** Update file uploaded */
+  function handleFileChange(evt) {
 
   }
-  /** */
+  /** Updated form checkbox inputs */
   function handleCheckBoxChange(evt) {
-
-
+    let field = evt.target;
+    console.log("field", evt.target);
+    // console.log('name=', name, 'value=', value)
+    // field.value
+    // setFormData(fData => ({ ...fData, [name]: value = !value }));
   }
 
-  /** */
+  /** Calls parent function with form data, and clears the form and file upload. */
   function handleSubmit(evt) {
 
   }
@@ -45,7 +55,7 @@ function AddPropertyForm({ addProperty }) {
         <h3>Add your backyard or pool!</h3>
         <div className="card">
           <div className="card-body">
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST" encType="multipart/form-data">
               <div className="mb-3">
                 <label className="form-label">Property Name</label>
                 <input
@@ -111,7 +121,7 @@ function AddPropertyForm({ addProperty }) {
                   name="image"
                   className="form-control"
                   value={formData.image}
-                  onChange={handleChange}
+                  onChange={handleFileChange}
                 />
               </div>
 
