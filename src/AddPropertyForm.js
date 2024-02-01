@@ -54,14 +54,16 @@ function AddPropertyForm({ addProperty }) {
       newFormData.append(name, value);
     }
 
-    const config = {
+    const payload = {
+      method: "POST",
+      body: newFormData,
       headers: {
-        'content-type':'multipart/form-data'
+        'Content-Type':'multipart/form-data'
       }
     };
 
-    const response = await fetch(url, newFormData, config);
-    const data = response.json;
+    const response = await fetch(url, payload);
+    const data = await response.json();
 
     console.log("data", data)
   }
