@@ -49,15 +49,21 @@ function AddPropertyForm({ addProperty }) {
     newFormData.append('file', file);
     newFormData.append('fileName', file.name);
 
+    console.log("newFormData before for loop", newFormData)
+
     for (let input in formData){
       const [name, value] = input;
       newFormData.append(name, value);
     }
 
+    console.log("newFormData", newFormData)
+
     const payload = {
       method: "POST",
       body: newFormData,
       headers: {
+        'mode': 'no-cors',
+        'Access-Control-Allow-Origin': '*',
         'Content-Type':'multipart/form-data'
       }
     };
