@@ -44,34 +44,8 @@ function AddPropertyForm({ addProperty }) {
   /** Calls parent function with form data, and clears the form and file upload. */
   async function handleSubmit(evt) {
     evt.preventDefault()
-    const url = 'http://localhost:5001/properties'
-    const newFormData = new FormData();
-    newFormData.append('file', file);
-    newFormData.append('fileName', file.name);
-
-    console.log("newFormData before for loop", newFormData)
-
-    for (let input in formData){
-      const [name, value] = input;
-      newFormData.append(name, value);
-    }
-
-    console.log("newFormData", newFormData)
-
-    const payload = {
-      method: "POST",
-      body: newFormData,
-      headers: {
-        'mode': 'no-cors',
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type':'multipart/form-data'
-      }
-    };
-
-    const response = await fetch(url, payload);
-    const data = await response.json();
-
-    console.log("data", data)
+    await addProperty(formData, file);
+    // TODO: handle any errors thrown
   }
 
   return (
