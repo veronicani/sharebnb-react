@@ -1,4 +1,5 @@
 import './App.css';
+import ShareBnB from './api';
 import { useState } from "react";
 import RoutesList from './RoutesList';
 import { BrowserRouter } from 'react-router-dom';
@@ -20,9 +21,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [properties, setProperties] = useState([]);
 
-
-  function addProperty(){
-
+  /** addProperty: Makes a request to API to add a new property. */
+  
+  async function addProperty(formData, file){
+    const resp = await ShareBnB.addProperty(formData, file);
+    console.log("addProperty resp=", resp);
   }
 
 
