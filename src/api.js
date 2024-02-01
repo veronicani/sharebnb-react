@@ -7,10 +7,10 @@ class ShareBnB {
 
   static async addProperty(formData, file) {
     const url = `${BASE_API_URL}/properties`
-    
+
     const newFormData = new FormData();
     newFormData.append('image', file);
-    
+
     for (let key in formData) {
       newFormData.append(key, formData[key]);
     }
@@ -26,7 +26,7 @@ class ShareBnB {
   }
 
   /** getProperties: get all properties. */
-  
+
 }
 
 export default ShareBnB;
