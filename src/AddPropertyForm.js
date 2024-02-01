@@ -92,9 +92,7 @@ function AddPropertyForm({ addProperty }) {
                   value={formData.backyard}
                   onChange={handleCheckBoxChange}
                 />
-                <label className="form-check-label">
-                  Backyard
-                </label>
+                <label className="form-check-label ms-2">Backyard</label>
               </div>
               <div className="mb-3">
                 <input
@@ -104,7 +102,7 @@ function AddPropertyForm({ addProperty }) {
                   value={formData.pool}
                   onChange={handleCheckBoxChange}
                 />
-                <label className="form-check-label"> Pool</label>
+                <label className="form-check-label ms-2">Pool</label>
               </div>
               <div className="mb-3">
                 <label className="form-label">Image</label>
