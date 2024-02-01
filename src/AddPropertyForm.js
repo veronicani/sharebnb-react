@@ -33,20 +33,37 @@ function AddPropertyForm({ addProperty }) {
 
   /** Update file uploaded */
   function handleFileChange(evt) {
-
+    setFile(evt.target.files[0])
   }
   /** Updated form checkbox inputs */
   function handleCheckBoxChange(evt) {
-    let field = evt.target;
-    console.log("field", evt.target);
-    // console.log('name=', name, 'value=', value)
-    // field.value
-    // setFormData(fData => ({ ...fData, [name]: value = !value }));
+    let field = evt.target
+    setFormData(fData => ({ ...fData, [field.name]: field.checked }));
   }
 
   /** Calls parent function with form data, and clears the form and file upload. */
-  function handleSubmit(evt) {
+  async function handleSubmit(evt) {
+    evt.preventDefault()
+    const url = 'http://localhost:5001/properties'
+    const newFormData = new FormData();
+    newFormData.append('file', file);
+    newFormData.append('fileName', file.name);
 
+    for (let input in formData){
+      const [name, value] = input;
+      newFormData.append(name, value);
+    }
+
+    const config = {
+      headers: {
+        'content-type':'multipart/form-data'
+      }
+    };
+
+    const response = await fetch(url, newFormData, config);
+    const data = response.json;
+
+    console.log("data", data)
   }
 
   return (
