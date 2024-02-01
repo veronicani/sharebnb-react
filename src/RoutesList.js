@@ -18,11 +18,13 @@ import AddPropertyForm from './AddPropertyForm';
 
 function RoutesList({ properties, addProperty }) {
   return (
+    <div className="pt-5">
       <Routes>
         {/* <Route path="/" element={Homepage} /> */}
         <Route path="/" element={<PropertiesPage properties={properties} />} />
-        <Route path="/add-property" element={<AddPropertyForm addProperty={addProperty}/>} />
+        <Route path="/add-property" element={<AddPropertyForm addProperty={addProperty} />} />
       </Routes>
+    </div>
   )
 }
 
