@@ -1,0 +1,14 @@
+.Navbar {
+  background-color: white;
+  border-bottom: 2px solid rgba(131, 197, 137, 0.547);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: rgb(146, 180, 133);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: rgb(146, 180, 133);
+}
