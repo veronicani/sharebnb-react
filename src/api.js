@@ -26,6 +26,13 @@ class ShareBnB {
   }
 
   /** getProperties: get all properties. */
+  static async getProperties() {
+    const url = `${BASE_API_URL}/properties`
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  }
 
 }
 
