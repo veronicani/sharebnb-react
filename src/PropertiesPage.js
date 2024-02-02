@@ -1,8 +1,10 @@
 import { useState } from "react";
+import PropertyCard from "./PropertyCard";
 
 function PropertiesPage({ properties }) {
+  console.log('PropertiesPage properties=', properties);
   return (
-    <div>Properties Page</div>
+    properties.map(p => <PropertyCard property={p} />)
   )
 }
 
