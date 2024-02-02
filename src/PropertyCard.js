@@ -29,10 +29,10 @@ function PropertyCard({ property }) {
           <h5 className="card-title">{name}</h5>
           <h6 className="card-text text-secondary">{description}</h6>
           <p className="card-text fw-light text-secondary my-1">{address}</p>
-          <p><span className="fw-bold text-secondary">${price}</span>/day</p>
+          <p className="text-secondary"><span className="fw-bold">${price}</span>/day</p>
           <div className="card-badges">
-            {pool && <span className="badge rounded-pill bg-secondary mx-1">pool</span>}
-            {backyard && <span className="badge rounded-pill bg-secondary mx-1">backyard</span>}
+            {pool && <span className="badge rounded-pill mx-1">pool</span>}
+            {backyard && <span className="badge rounded-pill mx-1">backyard</span>}
           </div>
         </div>
       </div>
