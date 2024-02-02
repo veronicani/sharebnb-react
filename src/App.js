@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbar search={search} />
         <RoutesList
             properties={properties}
             addProperty={addProperty}

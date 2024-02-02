@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Navigate } from "react-router-dom";
 import "./Navbar.css"
 
 /** Navbar for ShareBnb. 
@@ -6,11 +6,11 @@ import "./Navbar.css"
  * App -> Navbar
 */
 
-function Navbar() {
+function Navbar({ search }) {
   return (
     <nav className="Navbar navbar navbar-expand-md">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" onClick={() => search()} to="/">
           ShareBnB
         </Link>
         <ul className="navbar-nav ms-auto">
