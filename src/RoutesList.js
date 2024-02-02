@@ -18,7 +18,7 @@ import AddPropertyForm from './AddPropertyForm';
 
 function RoutesList({ properties, addProperty }) {
   return (
-    <div className="pt-5">
+    <div className="container pt-5">
       <Routes>
         {/* <Route path="/" element={Homepage} /> */}
         <Route path="/" element={<PropertiesPage properties={properties} />} />

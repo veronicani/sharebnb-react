@@ -20,19 +20,21 @@ function PropertyCard({ property }) {
 
 
   return (
-    <div className="PropertyCard card" style={{width: "18rem;"}}>
-      <img className="card-img-top image-fluid"
-        src={url} alt={name} />
+    <div className="col-6 col-md-4 col-lg-3">
+      <div className="PropertyCard card mb-3">
+        <img className="card-img-top image-fluid"
+          src={url} alt={name} />
 
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
-        <h6 className="card-text">{description}</h6>
-        <p className="card-text">Address: {address}</p>
-        <p>Price per night: {price}</p>
-      <ul className="list-group list-group-flush"><span>Includes:</span>
-        {pool && <li className="list-group-item">pool</li>}
-        {backyard && <li className="list-group-item">backyard</li>}
-      </ul>
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <h6 className="card-text text-secondary">{description}</h6>
+          <p className="card-text fw-light text-secondary my-1">{address}</p>
+          <p><span className="fw-bold text-secondary">${price}</span>/day</p>
+          <div className="card-badges">
+            {pool && <span className="badge rounded-pill bg-secondary mx-1">pool</span>}
+            {backyard && <span className="badge rounded-pill bg-secondary mx-1">backyard</span>}
+          </div>
+        </div>
       </div>
     </div>
   );
