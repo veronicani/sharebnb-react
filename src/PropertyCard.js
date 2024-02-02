@@ -20,22 +20,20 @@ function PropertyCard({ property }) {
 
 
   return (
-    <div className="PropertyCard card">
-      <h6 className="card-title">{name}</h6>
-      <div className="card-body">
-        <h5>Address: {address}</h5>
-        <p>{description}</p>
-      </div>
-      <img class="card-img-top image-fluid" style={{height: "10em"}}
+    <div className="PropertyCard card" style={{width: "18rem;"}}>
+      <img className="card-img-top image-fluid"
         src={url} alt={name} />
+
       <div className="card-body">
+        <h5 className="card-title">{name}</h5>
+        <h6 className="card-text">{description}</h6>
+        <p className="card-text">Address: {address}</p>
         <p>Price per night: {price}</p>
-      </div>
       <ul className="list-group list-group-flush"><span>Includes:</span>
         {pool && <li className="list-group-item">pool</li>}
         {backyard && <li className="list-group-item">backyard</li>}
       </ul>
-      {/* <img src={url} alt={name} /> */}
+      </div>
     </div>
   );
 }

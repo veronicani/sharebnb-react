@@ -1,5 +1,5 @@
 .PropertyCard {
-  max-height: 250px;
+  width:400px;
   margin-bottom: 1rem;
   color: inherit;
   border-radius: 10;
@@ -8,5 +8,7 @@
 }
 
 .PropertyCard img {
+  padding: 20px;
+  max-height: 250px;
   max-width: 250px;
 }
