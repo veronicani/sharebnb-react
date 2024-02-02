@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Navigate, BrowserRouter, Route, Routes } from 'react-router-dom';
 import PropertiesPage from './PropertiesPage';
 import AddPropertyForm from './AddPropertyForm';
 
@@ -31,6 +31,9 @@ function RoutesList({ properties, addProperty, search }) {
             <AddPropertyForm
                 addProperty={addProperty}
             />}
+        />
+        <Route path="*" element={
+            <Navigate to="/" />}
         />
       </Routes>
     </div>
