@@ -2,8 +2,9 @@ import './App.css';
 import ShareBnB from './api';
 import { useState, useEffect } from "react";
 import RoutesList from './RoutesList';
-import { BrowserRouter } from 'react-router-dom';
+import Navbar from './Navbar';
 
+import { BrowserRouter } from 'react-router-dom';
 /** App for ShareBnB.
  *
  * Props:
@@ -44,7 +45,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <RoutesList properties={properties} addProperty={addProperty}/>
+        <Navbar />
+        <RoutesList properties={properties} addProperty={addProperty}/>
       </BrowserRouter>
     </div>
   );
