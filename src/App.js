@@ -25,12 +25,8 @@ function App() {
   /** getProperties: Makes a request to API to get all properties. */
 
   useEffect(function getPropertiesOnMount() {
-    async function fetchProperties() {
-      const { properties } = await ShareBnB.getProperties();
-      setProperties(properties);
-      setIsLoading(false);
-    }
-    fetchProperties();
+    console.log('useEffect getPropertiesOnMount');
+    search();
   }, []);
 
   /** addProperty: Makes a request to API to add a new property. */
