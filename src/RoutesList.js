@@ -16,13 +16,22 @@ import AddPropertyForm from './AddPropertyForm';
  * App -> RoutesList -> { PropertiesPage, AddPropertyForm }
 */
 
-function RoutesList({ properties, addProperty }) {
+function RoutesList({ properties, addProperty, search }) {
   return (
     <div className="container pt-5">
       <Routes>
         {/* <Route path="/" element={Homepage} /> */}
-        <Route path="/" element={<PropertiesPage properties={properties} />} />
-        <Route path="/add-property" element={<AddPropertyForm addProperty={addProperty} />} />
+        <Route path="/" element={
+            <PropertiesPage
+                properties={properties}
+                search={search}
+            />}
+        />
+        <Route path="/add-property" element={
+            <AddPropertyForm
+                addProperty={addProperty}
+            />}
+        />
       </Routes>
     </div>
   )

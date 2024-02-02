@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropertyCard from "./PropertyCard";
+import SearchForm from "./SearchForm";
 
 /** Display all properties.
  *
@@ -13,11 +14,12 @@ import PropertyCard from "./PropertyCard";
  * RoutesList -> PropertiesPage -> PropertyCard
  */
 
-function PropertiesPage({ properties }) {
+function PropertiesPage({ properties, search}) {
   console.log('PropertiesPage properties=', properties);
   return (
-    <div class="row">
-      {properties.map(p => <PropertyCard property={p} />)}
+    <div className="row">
+      <SearchForm search={search} />
+      {properties.map(p => <PropertyCard property={p} search={search}/>)}
     </div>
   )
 }

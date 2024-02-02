@@ -40,13 +40,28 @@ function App() {
     setProperties(p => ([...p, resp.property]))
   }
 
+  /** search: Makes a request to API for properties that matches search term.*/
+
+  async function search(term){
+    console.log("App search term=", term)
+    const { properties } = await ShareBnB.getProperties(term);
+    console.log("search properties", properties)
+    setProperties(properties);
+    setIsLoading(false);
+  }
+
+
   if (isLoading === true) return <p>Loading...</p>;
 
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <RoutesList properties={properties} addProperty={addProperty}/>
+        <RoutesList
+            properties={properties}
+            addProperty={addProperty}
+            search={search}
+        />
       </BrowserRouter>
     </div>
   );
