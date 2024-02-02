@@ -20,13 +20,12 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [properties, setProperties] = useState([]);
-
+  console.log('App properties state: ', properties);
   /** getProperties: Makes a request to API to get all properties. */
 
   useEffect(function getPropertiesOnMount() {
     async function fetchProperties() {
       const { properties } = await ShareBnB.getProperties(); 
-      console.log('properties=', properties);
       setProperties(properties);
       setIsLoading(false);
     }
