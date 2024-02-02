@@ -22,18 +22,24 @@ function RoutesList({ properties, addProperty, search }) {
       <Routes>
         {/* <Route path="/" element={Homepage} /> */}
         <Route path="/" element={
-            <PropertiesPage
-                properties={properties}
-                search={search}
-            />}
+          <PropertiesPage
+            properties={properties}
+            search={search}
+          />}
         />
         <Route path="/add-property" element={
-            <AddPropertyForm
-                addProperty={addProperty}
-            />}
+          <AddPropertyForm
+            addProperty={addProperty}
+          />}
+        />
+        <Route path="/:term" element={
+          <PropertiesPage
+            properties={properties}
+            search={search}
+          />}
         />
         <Route path="*" element={
-            <Navigate to="/" />}
+          <Navigate to="/" />}
         />
       </Routes>
     </div>
