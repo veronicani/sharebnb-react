@@ -1,21 +1,22 @@
 
 /** Renders a card for a property.
- * 
+ *
  * Props:
  * - property
- * 
+ *
  * State: none
- * 
+ *
  * PropertiesPage -> PropertyCard
  */
 function PropertyCard({ property }) {
   console.log('PropertyCard property', property);
-  const { name, description, price, address, backyard, pool, images } = property;
-  console.log('images=', images);
-  console.log('image 0: ', images[0]);
-  const { url } = images[0]; //images is an arr, but we only have 1 img
-  console.log('typeof url: ', typeof url);
-  console.log('url: ', url);
+  const { name, description, price, address, backyard, pool } = property;
+
+  const images = property.images[0];
+  console.log("images", images)
+  const { url } = images; //images is an arr, but we only have 1 img
+  console.log("url", url)
+
 
   return (
     <div className="PropertyCard card">

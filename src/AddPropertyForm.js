@@ -1,5 +1,7 @@
 import "./AddPropertyForm.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const INITIAL_FORM_DATA = {
   name: "",
   address: "",
@@ -22,6 +24,9 @@ const INITIAL_FORM_DATA = {
 function AddPropertyForm({ addProperty }) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [file, setFile] = useState(null);
+
+  const navigate = useNavigate()
+
   console.debug("formData state=", formData,
                 "file state=", file,
   )
@@ -45,6 +50,10 @@ function AddPropertyForm({ addProperty }) {
   async function handleSubmit(evt) {
     evt.preventDefault()
     await addProperty(formData, file);
+    setFormData(INITIAL_FORM_DATA);
+    setFile(null);
+    navigate("/");
+
     // TODO: handle any errors thrown
   }
 

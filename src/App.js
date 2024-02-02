@@ -25,18 +25,18 @@ function App() {
 
   useEffect(function getPropertiesOnMount() {
     async function fetchProperties() {
-      const { properties } = await ShareBnB.getProperties(); 
+      const { properties } = await ShareBnB.getProperties();
       setProperties(properties);
       setIsLoading(false);
     }
     fetchProperties();
-  }, []);  
+  }, []);
 
   /** addProperty: Makes a request to API to add a new property. */
 
   async function addProperty(formData, file){
     const resp = await ShareBnB.addProperty(formData, file);
-    console.log("addProperty resp=", resp);
+    setProperties(p => ([...p, resp.property]))
   }
 
   if (isLoading === true) return <p>Loading...</p>;
