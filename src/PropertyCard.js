@@ -1,3 +1,4 @@
+import "./PropertyCard.css";
 
 /** Renders a card for a property.
  *
@@ -20,17 +21,21 @@ function PropertyCard({ property }) {
 
   return (
     <div className="PropertyCard card">
+      <h6 className="card-title">{name}</h6>
       <div className="card-body">
-        <h6 className="card-title">{name}</h6>
+        <h5>Address: {address}</h5>
         <p>{description}</p>
-        <p>Price per night: {price}</p>
-        <p>Address: {address}</p>
-        <ul><span>Includes:</span>
-        {pool && <li>pool</li>}
-        {backyard && <li>backyard</li>}
-        </ul>
-        <img src={url} alt={name} />
       </div>
+      <img class="card-img-top image-fluid" style={{height: "10em"}}
+        src={url} alt={name} />
+      <div className="card-body">
+        <p>Price per night: {price}</p>
+      </div>
+      <ul className="list-group list-group-flush"><span>Includes:</span>
+        {pool && <li className="list-group-item">pool</li>}
+        {backyard && <li className="list-group-item">backyard</li>}
+      </ul>
+      {/* <img src={url} alt={name} /> */}
     </div>
   );
 }
