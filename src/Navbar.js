@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css"
+
 /** Navbar for ShareBnb. 
  * 
  * App -> Navbar

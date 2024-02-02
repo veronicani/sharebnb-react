@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PropertyCard from "./PropertyCard";
 import SearchForm from "./SearchForm";
 
@@ -6,8 +5,9 @@ import SearchForm from "./SearchForm";
  *
  * Props:
  * - properties
- * [{name, address, description, price, backyard, pool, images},...]
- *
+ * [{ id, name, address, backyard, pool, description, price, user_id }, ...]
+ * - search: function to call in parent
+ * 
  * State:
  * - none.
  *

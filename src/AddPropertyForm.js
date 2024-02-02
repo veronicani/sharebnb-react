@@ -10,13 +10,15 @@ const INITIAL_FORM_DATA = {
   backyard: false,
   pool: false,
 };
+
 /** Form to add property.
  *
  * Props:
- * - addProperty - function to call in parent.
+ * - addProperty: function to call in parent.
  *
  * State:
  * - formData
+ * - file: image upload for property.
  *
  * RoutesList -> AddPropertyForm
  */
@@ -24,9 +26,6 @@ const INITIAL_FORM_DATA = {
 function AddPropertyForm({ addProperty }) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [file, setFile] = useState(null);
-
-  const navigate = useNavigate()
-
   console.debug("formData state=", formData,
                 "file state=", file,
   )
@@ -45,6 +44,8 @@ function AddPropertyForm({ addProperty }) {
     let field = evt.target
     setFormData(fData => ({ ...fData, [field.name]: field.checked }));
   }
+  
+  const navigate = useNavigate()
 
   /** Calls parent function with form data, and clears the form and file upload. */
   async function handleSubmit(evt) {
@@ -153,8 +154,6 @@ function AddPropertyForm({ addProperty }) {
       </div>
     </div>
   );
-
-
 }
 
 export default AddPropertyForm;
