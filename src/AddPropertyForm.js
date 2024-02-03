@@ -41,10 +41,10 @@ function AddPropertyForm({ addProperty }) {
   }
   /** Updated form checkbox inputs */
   function handleCheckBoxChange(evt) {
-    let field = evt.target
+    let field = evt.target;
     setFormData(fData => ({ ...fData, [field.name]: field.checked }));
   }
-  
+
   const navigate = useNavigate()
 
   /** Calls parent function with form data, and clears the form and file upload. */
