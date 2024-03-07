@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://veronicani-sharebnb-flask.onrender.com/";
+const BASE_API_URL = process.env.BASE_API_URL;
 
 /** ShareBnB API. */
 class ShareBnB {
