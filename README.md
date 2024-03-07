@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Sharebnb React Frontend
+Frontend for Sharebnb. Includes API to interface with [Sharebnb Flask Backend](https://github.com/veronicani/sharebnb-flask). Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Component diagram
+![Component diagram](/public/component-diagram.png?raw=true)
 
-## Available Scripts
+## CRA Available Scripts
 
 In the project directory, you can run:
 
