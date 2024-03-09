@@ -118,11 +118,6 @@ To get a local copy up and running, please follow these steps.
    git clone https://github.com/veronicani/sharebnb-react.git
    ```
 3. 
-4. Run the app in the development mode.
-  ```sh
-  `npm start`
-  ```
-  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
