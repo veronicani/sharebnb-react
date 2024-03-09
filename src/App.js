@@ -21,11 +21,10 @@ import Navbar from './Navbar';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [properties, setProperties] = useState([]);
-  console.log('App properties state: ', properties);
+
   /** getPropertiesOnMount: Executes search without a search term. */
 
   useEffect(function getPropertiesOnMount() {
-    console.log('useEffect getPropertiesOnMount');
     search();
   }, []);
 
@@ -41,9 +40,7 @@ function App() {
   /** search: Makes a request to API for properties that matches search term.*/
 
   async function search(term){
-    console.log("App search term=", term)
     const { properties } = await ShareBnB.getProperties(term);
-    console.log("search properties", properties)
     setProperties(properties);
     setIsLoading(false);
   }
