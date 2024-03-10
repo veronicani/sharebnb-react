@@ -164,7 +164,7 @@ Veronica Ni - [veronicani.dev](https://veronicani.dev) - hello.veronicani@gmail.
 
 Project Front End Link: [https://github.com/veronicani/sharebnb-react](https://github.com/veronicani/sharebnb-react)
 
-Project Back End Link: [https://github.com/veronicani/sharebnb-react](https://github.com/veronicani/sharebnb-react)
+Project Back End Link: [https://github.com/veronicani/sharebnb-flask](https://github.com/veronicani/sharebnb-flask)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
