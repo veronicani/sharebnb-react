@@ -13,9 +13,9 @@
 <br />
 <div align="center">
   <!-- To start a screen record on Mac: Shift + Cmd + 5 -->
-  <!-- <a href="https://github.com/veronicani/sharebnb-react">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/veronicani/sharebnb-react">
+    <img src="/public/sharebnb-demo.gif" alt="Demo recording">
+  </a>
 
 <h3 align="center">Sharebnb</h3>
 
@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 Sharebnb is a space sharing app where users can browse, like, and rent out outdoor spaces. 
 
