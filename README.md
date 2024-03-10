@@ -39,13 +39,15 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<div align="center">
+
 ![Top Languages](https://img.shields.io/github/languages/top/veronicani/sharebnb-react)
 ![GitHub repo size](https://img.shields.io/github/repo-size/veronicani/sharebnb-react)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/veronicani/sharebnb-react)
-![Contributors](https://img.shields.io/github/last-commit/veronicani/sharebnb-react)
-![GitHub last commit](https://img.shields.io/github/last-commit/veronicani/sharebnb-react)
 ![Contributors](https://img.shields.io/github/contributors/veronicani/sharebnb-react)
+![GitHub last commit](https://img.shields.io/github/last-commit/veronicani/sharebnb-react)
 
+</div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -121,7 +123,6 @@ Back-end:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -133,18 +134,17 @@ To get a local copy up and running, please follow these steps.
    git clone https://github.com/veronicani/sharebnb-react.git
    ```
 3. Install frontend dependencies.
-  ```sh
-  npm install
-  ```
+    ```sh
+    npm install
+    ```
 4. Run the app in the development mode.
-  ```sh
-  npm start
-  ```
+    ```sh
+    npm start
+    ```
   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
@@ -166,14 +166,14 @@ To get a local copy up and running, please follow these steps.
 ## Contact
 
 Veronica Ni - [veronicani.dev](https://veronicani.dev) - hello.veronicani@gmail.com
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[![LinkedIn][linkedin-shield]][linkedin-url] - [linkedin.com/in/veronicani][linkedin-url]
 
 Project Front End Link: [https://github.com/veronicani/sharebnb-react](https://github.com/veronicani/sharebnb-react)
 
 Project Back End Link: [https://github.com/veronicani/sharebnb-flask](https://github.com/veronicani/sharebnb-flask)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
