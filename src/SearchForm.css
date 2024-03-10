@@ -1,0 +1,8 @@
+.SearchForm .btn {
+  background-color: rgb(146, 180, 133);
+  border: none;
+}
+
+.SearchForm .btn:active {
+  background-color: rgb(124, 152, 113);
+}

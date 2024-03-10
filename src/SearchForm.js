@@ -1,3 +1,4 @@
+import './SearchForm.css';
 import React, { useState } from "react";
 
 /** Renders Search form.
