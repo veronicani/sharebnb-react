@@ -12,6 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  <!-- To start a screen record on Mac: Shift + Cmd + 5 -->
   <!-- <a href="https://github.com/veronicani/sharebnb-react">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
