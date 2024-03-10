@@ -31,6 +31,20 @@
 </div>
 
 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+![Top Languages](https://img.shields.io/github/languages/top/veronicani/sharebnb-react)
+![GitHub repo size](https://img.shields.io/github/repo-size/veronicani/sharebnb-react)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/veronicani/sharebnb-react)
+![Contributors](https://img.shields.io/github/last-commit/veronicani/sharebnb-react)
+![GitHub last commit](https://img.shields.io/github/last-commit/veronicani/sharebnb-react)
+![Contributors](https://img.shields.io/github/contributors/veronicani/sharebnb-react)
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -148,19 +162,11 @@ To get a local copy up and running, please follow these steps.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
 Veronica Ni - [veronicani.dev](https://veronicani.dev) - hello.veronicani@gmail.com
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 Project Front End Link: [https://github.com/veronicani/sharebnb-react](https://github.com/veronicani/sharebnb-react)
 
@@ -186,8 +192,6 @@ This is a project Jia Gan and I completed during a 1 week sprint at Rithm School
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/veronicani/sharebnb-react.svg?style=for-the-badge
-[contributors-url]: https://github.com/veronicani/sharebnb-react/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/veronicani/sharebnb-react.svg?style=for-the-badge
 [forks-url]: https://github.com/veronicani/sharebnb-react/network/members
 [stars-shield]: https://img.shields.io/github/stars/veronicani/sharebnb-react.svg?style=for-the-badge
@@ -197,7 +201,7 @@ This is a project Jia Gan and I completed during a 1 week sprint at Rithm School
 [license-shield]: https://img.shields.io/github/license/veronicani/sharebnb-react.svg?style=for-the-badge
 [license-url]: https://github.com/veronicani/sharebnb-react/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/veronicani
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
