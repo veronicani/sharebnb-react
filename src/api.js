@@ -28,14 +28,14 @@ class ShareBnB {
   /** getProperties: get all properties. */
   static async getProperties(search) {
     let url = new URL(`${BASE_API_URL}/properties`);
-    console.log("API url:", url);
+
     url.search = (search)
       ? new URLSearchParams({ term: search }).toString()
       : "";
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log("API search data", data);
+
     return data;
   }
 

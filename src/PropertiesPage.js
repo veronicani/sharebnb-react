@@ -15,7 +15,7 @@ import SearchForm from "./SearchForm";
  */
 
 function PropertiesPage({ properties, search}) {
-  console.log('PropertiesPage properties=', properties);
+  // console.log('PropertiesPage properties=', properties);
   return (
     <div className="row">
       <SearchForm search={search} />

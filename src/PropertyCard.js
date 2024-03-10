@@ -11,7 +11,7 @@ import "./PropertyCard.css";
  * PropertiesPage -> PropertyCard
  */
 function PropertyCard({ property }) {
-  console.log('PropertyCard property', property);
+  // console.log('PropertyCard property', property);
   const { name, description, price, address, backyard, pool } = property;
 
   const images = property.images[0];

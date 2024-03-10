@@ -18,8 +18,7 @@ function SearchForm({ search }) {
   // console.log("SearchForm", "search=", typeof search);
 
   const [searchTerm, setSearchTerm] = useState("");
-
-  console.log("SearchForm searchTerm=", searchTerm)
+  // console.log("SearchForm searchTerm=", searchTerm);
 
   /** Update form fields */
   function handleChange(evt) {
