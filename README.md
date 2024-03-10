@@ -113,14 +113,17 @@ Back-end:
 To get a local copy up and running, please follow these steps.
 
 1. Follow the instructions for cloning and setting up the [backend repo](https://github.com/veronicani/sharebnb-flask).
-2. Clone the frontend repo.
+2. In a new terminal, clone the frontend repo.
    ```sh
    git clone https://github.com/veronicani/sharebnb-react.git
    ```
-3. 
+3. Install frontend dependencies.
+  ```sh
+  npm install
+  ```
 4. Run the app in the development mode.
   ```sh
-  `npm start`
+  npm start
   ```
   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
