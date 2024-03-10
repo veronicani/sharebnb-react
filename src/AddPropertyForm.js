@@ -60,7 +60,7 @@ function AddPropertyForm({ addProperty }) {
 
   return (
     <div className="AddPropertyForm">
-      <div className="container col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+      <div className="container col-md-8 col-lg-6">
         <h3>Add your backyard or pool!</h3>
         <div className="card">
           <div className="card-body">
