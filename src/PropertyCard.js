@@ -25,14 +25,18 @@ function PropertyCard({ property }) {
           src={url}
           alt={name} 
         />
-        <div className="card-body">
+        <div className="card-body d-flex flex-column justify-content-between">
+          <div>
           <h5 className="card-title">{name}</h5>
           <h6 className="card-text text-secondary">{description}</h6>
-          <p className="card-text fw-light text-secondary my-1">{address}</p>
-          <p className="text-secondary">
-            <span className="fw-bold">${price}</span>
-            /day
-          </p>
+          </div>
+          <div>
+            <p className="card-text fw-light text-secondary my-1">{address}</p>
+            <p className="text-secondary my-0">
+              <span className="fw-bold">${price}</span>
+              /day
+            </p>
+          </div>
           <div className="card-badges">
             {pool &&
               <span className="badge rounded-pill mx-1">pool</span>}
