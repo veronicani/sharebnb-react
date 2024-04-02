@@ -18,10 +18,13 @@ function PropertyCard({ property }) {
   const { url } = images; //images is an arr, but we only have 1 img
 
   return (
-    <div className="col-6 col-md-4 col-lg-3">
-      <div className="PropertyCard card mb-3">
-        <img className="card-img-top image-fluid"
-          src={url} alt={name} />
+    <div className="col">
+      <div className="PropertyCard card h-100">
+        <img 
+          className="card-img-top image-fluid"
+          src={url}
+          alt={name} 
+        />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <h6 className="card-text text-secondary">{description}</h6>
