@@ -1,5 +1,7 @@
-import { NavLink, Link, Navigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css"
+
+import { ReactComponent as SharebnbLogo } from "./sharebnb-logo-text-color.svg";
 
 /** Navbar for ShareBnb. 
  * 
@@ -10,8 +12,12 @@ function Navbar({ search }) {
   return (
     <nav className="Navbar navbar navbar-expand-md">
       <div className="container-fluid">
-        <Link className="navbar-brand" onClick={() => search()} to="/">
-          ShareBnB
+        <Link 
+          className="navbar-brand"
+          onClick={() => search()} 
+          to="/"
+        >
+          <SharebnbLogo />
         </Link>
         <ul className="navbar-nav ms-auto">
         <li className="nav-item me-4">
