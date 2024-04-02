@@ -41,7 +41,7 @@ function SearchForm({ search }) {
             <input
               className="form-control form-control-lg"
               name="searchTerm"
-              placeholder="Enter search term..."
+              placeholder="Search by location or name"
               value={searchTerm}
               onChange={handleChange}
             />
