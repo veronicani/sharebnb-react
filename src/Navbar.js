@@ -5,12 +5,16 @@ import { ReactComponent as SharebnbLogo } from "./sharebnb-logo-text-color.svg";
 
 /** Navbar for ShareBnb. 
  * 
+ * Props:
+ * - search: function to call in parent
+ * 
  * App -> Navbar
 */
 
 function Navbar({ search }) {
+
   return (
-    <nav className="Navbar navbar navbar-expand-md">
+    <nav className="Navbar navbar navbar-expand-md sticky-top">
       <div className="container-fluid">
         <Link 
           className="navbar-brand"
