@@ -1,7 +1,6 @@
 const BASE_API_URL = (
   process.env.REACT_APP_BASE_API_URL || "http://localhost:5001"
 );
-console.log('BASE_API_URL=', BASE_API_URL);
 
 /** ShareBnB API. */
 class ShareBnB {
