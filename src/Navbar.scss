@@ -3,14 +3,15 @@
 .Navbar {
   background-color: white;
   border-bottom: 2px solid $primary-light;
+  
+  //TODO: add a shadow to navbar via .scrolled if page being scrolled
+  .scrolled {
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+  }
 }
 
-//TODO: add a shadow to navbar via .scrolled if page being scrolled
-.Navbar.scrolled {
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
-  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
-}
 
 .navbar-nav .nav-link.active {
   font-weight: bold;
