@@ -25,7 +25,7 @@ function Navbar({ search }) {
         </Link>
         <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/add-property">
+          <NavLink className="nav-link p-0 mx-2" to="/add-property">
             Add Property
           </NavLink>
         </li>
