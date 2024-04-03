@@ -13,7 +13,7 @@ import "./Footer.scss";
 
 function Footer() {
   return (
-    <footer className="Footer mt-4">
+    <footer className="Footer mt-auto">
       <div className="container">
         <div className="row">
           <div className="col d-flex justify-content-between py-4">

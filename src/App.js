@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import ShareBnB from './api';
 import { useState, useEffect } from "react";
 import { BrowserRouter } from 'react-router-dom';
@@ -49,7 +49,7 @@ function App() {
   if (isLoading === true) return <p>Loading...</p>;
 
   return (
-    <div className="App">
+    <body className="App d-flex flex-column vh-100">
       <BrowserRouter>
         <Navbar search={search} />
         <RoutesList
@@ -59,7 +59,7 @@ function App() {
         />
         <Footer />
       </BrowserRouter>
-    </div>
+    </body>
   );
 }
 

@@ -18,7 +18,7 @@ import AddPropertyForm from './AddPropertyForm';
 
 function RoutesList({ properties, addProperty, search }) {
   return (
-    <div className="container pt-5">
+    <main className="container py-5">
       <Routes>
         {/* <Route path="/" element={Homepage} /> */}
         <Route path="/" element={
@@ -42,7 +42,7 @@ function RoutesList({ properties, addProperty, search }) {
           <Navigate to="/" />}
         />
       </Routes>
-    </div>
+    </main>
   )
 }
 
