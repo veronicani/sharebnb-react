@@ -1,0 +1,15 @@
+@import 'styles/colors';
+
+.AddPropertyForm h3 {
+  color: $primary;
+}
+
+.AddPropertyForm .btn {
+  background-color: $primary;
+}
+
+.AddPropertyForm .btn:active {
+  background-color: $primary-light;
+}
+
+

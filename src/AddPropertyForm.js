@@ -1,4 +1,4 @@
-import "./AddPropertyForm.css";
+import "./AddPropertyForm.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
