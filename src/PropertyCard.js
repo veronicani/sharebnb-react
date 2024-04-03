@@ -1,4 +1,4 @@
-import "./PropertyCard.css";
+import "./PropertyCard.scss";
 
 /** Renders a card for a property.
  *
