@@ -10,7 +10,7 @@
 
 
 <!-- PROJECT LOGO -->
-<h1 align="center">Sharebnb</h1>
+<h1 align="center">ShareBnB</h1>
 
 <br />
 <div align="center">
