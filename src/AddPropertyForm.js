@@ -26,9 +26,7 @@ const INITIAL_FORM_DATA = {
 function AddPropertyForm({ addProperty }) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [file, setFile] = useState(null);
-  console.debug("formData state=", formData,
-                "file state=", file,
-  )
+
   /** Update form input fields */
   function handleChange(evt) {
     const { name, value } = evt.target;
