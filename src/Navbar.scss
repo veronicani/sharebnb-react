@@ -1,0 +1,11 @@
+@import 'styles/colors';
+
+.Navbar {
+  background-color: white;
+  border-bottom: 2px solid $primary-light;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: $primary;
+}
