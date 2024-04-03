@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import RoutesList from './RoutesList';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 /** App for ShareBnB.
  *
@@ -56,6 +57,7 @@ function App() {
             addProperty={addProperty}
             search={search}
         />
+        <Footer />
       </BrowserRouter>
     </div>
   );
