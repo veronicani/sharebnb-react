@@ -16,8 +16,8 @@ function Footer() {
     <footer className="Footer mt-auto">
       <div className="container">
         <div className="row">
-          <div className="col d-flex justify-content-between py-4">
-            <p className="align-text-center">&#169; Sharebnb 2024.</p>
+          <div className="col d-flex justify-content-between align-items-center py-4">
+            <p className="mb-0">&#169; Sharebnb 2024.</p>
             <a href="https://github.com/veronicani/sharebnb-react">
               <i className="bi bi-github"></i>
             </a>
