@@ -20,7 +20,7 @@ function PropertiesPage({ properties, search}) {
     <div className="row">
       <SearchForm search={search} />
       <div className="col">
-        <div className="row row-cols-1 row-cols-md-4 g-4">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
           {properties.map(
             p => <PropertyCard
               property={p}
