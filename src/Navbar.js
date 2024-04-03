@@ -20,7 +20,7 @@ function Navbar({ search }) {
           <SharebnbLogo />
         </Link>
         <ul className="navbar-nav ms-auto">
-        <li className="nav-item me-4">
+        <li className="nav-item">
           <NavLink className="nav-link" to="/add-property">
             Add Property
           </NavLink>
