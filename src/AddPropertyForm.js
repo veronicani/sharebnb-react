@@ -2,6 +2,8 @@ import "./AddPropertyForm.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Button from "./Button";
+
 const INITIAL_FORM_DATA = {
   name: "",
   address: "",
@@ -142,9 +144,11 @@ function AddPropertyForm({ addProperty }) {
               : null} */}
 
               <div className="d-grid">
-                <button className="btn btn-primary" onClick={handleSubmit}>
-                  Add Property
-                </button>
+                <Button
+                  bsClasses="btn btn-primary btn-white-text"
+                  handleClick={handleSubmit}
+                  label="Add Property"
+                />
               </div>
             </form>
           </div>

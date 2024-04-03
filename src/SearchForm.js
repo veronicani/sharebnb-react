@@ -1,5 +1,7 @@
-import './SearchForm.css';
+import './SearchForm.scss';
 import React, { useState } from "react";
+
+import Button from './Button';
 
 /** Renders Search form.
  *
@@ -47,9 +49,11 @@ function SearchForm({ search }) {
             />
           </div>
           <div className="col-auto">
-            <button type="submit" className="btn btn-lg btn-primary">
-              Submit
-            </button>
+            <Button
+              bsClasses="btn btn-lg btn-primary btn-white-text"
+              handleClick={handleSubmit}
+              label="Submit"
+            />
           </div>
         </div>
       </form>

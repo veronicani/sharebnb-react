@@ -1,0 +1,14 @@
+@import 'styles/colors';
+
+.Button.btn-primary.btn-white-text {
+  color: white;
+  
+  &:focus { //btn has additional :focus when clicked
+  color: white;
+  }
+
+  &:hover,
+  &:active {
+    background-color: shade-color($primary, $btn-hover-bg-shade-amount);  
+  }
+}
