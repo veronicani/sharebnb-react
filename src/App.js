@@ -21,7 +21,10 @@ import Footer from './Footer';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [properties, setProperties] = useState([]);
+  const [propertiesData, setProperties] = useState({
+    data: null,
+    errors: null
+  });
 
   /** getPropertiesOnMount: Executes search without a search term. */
 
@@ -41,19 +44,37 @@ function App() {
   /** search: Makes a request to API for properties that matches search term.*/
 
   async function search(term){
-    const { properties } = await ShareBnB.getProperties(term);
-    setProperties(properties);
-    setIsLoading(false);
+    try {
+      const { properties } = await ShareBnB.getProperties(term);
+      setProperties({
+        data: properties,
+        errors: null
+      });
+      setIsLoading(false);
+    } catch (err) {
+      setProperties({
+        data: null,
+        errors: err
+      });
+      setIsLoading(false);
+    }
   }
 
-  if (isLoading === true) return <p>Loading...</p>;
+  if (isLoading === true && propertiesData.data === null) {
+    return (
+      <div className="CompanyList-loader">
+        <div id="html-spinner"></div>
+        <i>Loading...</i>
+      </div>
+    );
+  } else if (propertiesData.errors) return <i>Server error. Please try again.</i>
 
   return (
     <body className="App d-flex flex-column vh-100">
       <BrowserRouter>
         <Navbar search={search} />
         <RoutesList
-            properties={properties}
+            properties={propertiesData.data}
             addProperty={addProperty}
             search={search}
         />
