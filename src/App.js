@@ -39,7 +39,12 @@ function App() {
 
   async function addProperty(formData, file){
     const resp = await ShareBnB.addProperty(formData, file);
-    setProperties(p => ([...p, resp.property]))
+    
+    setIsLoading(true);
+    setProperties(p => ({
+      data: [...p.data, resp.property],
+      errors: null
+    }));
   }
 
   /** search: Makes a request to API for properties that matches search term.*/
