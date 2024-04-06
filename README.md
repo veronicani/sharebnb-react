@@ -16,8 +16,10 @@
 <div align="center">
   <!-- To start a screen record on Mac: Shift + Cmd + 5 -->
   <a href="https://github.com/veronicani/sharebnb-react">
-    <img src="/public/sharebnb-demo.gif" alt="Demo recording">
+    <img src="/public/sharebnb-2-demo.gif" alt="Demo recording">
   </a>
+
+  <br/>
 
   <p align="center">
     Tired of indoor game nights, Netflux watch parties, but not <i>that</i> interested in camping / glamping / 5-hour hiking through the woods with your friends? Planning a birthday bash, a family reunion, a yoga retreat, and your 500sq.ft apartment isn't making the cut? Look no further than Sharebnb, where we connect backyard oases(ises?)🏕️ and sparkly cerulean pools🏝️ with eager guests looking to plan their next mildly-outdoor getaway!
