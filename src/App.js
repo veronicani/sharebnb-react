@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import RoutesList from './RoutesList';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Loader from './Loader';
 
 /** App for ShareBnB.
  *
@@ -62,10 +63,7 @@ function App() {
 
   if (isLoading === true && propertiesData.data === null) {
     return (
-      <div className="CompanyList-loader">
-        <div id="html-spinner"></div>
-        <i>Loading...</i>
-      </div>
+      <Loader />
     );
   } else if (propertiesData.errors) return <i>Server error. Please try again.</i>
 
