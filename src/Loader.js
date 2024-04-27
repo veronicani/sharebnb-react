@@ -1,6 +1,6 @@
 import "./Loader.scss"
 
-/** LoadingSpinner. 
+/** Loader
  * 
  * Props:
  * - none.
@@ -8,14 +8,14 @@ import "./Loader.scss"
  * State:
  * - none.
  * 
- * App -> LoadingSpinner
+ * App -> Loader
 */
 
 function Loader() {
   return (
     <div className="Loader">
       <div id="html-spinner"></div>
-      <i>Loading...</i>
+      <i>Server waking up...</i>
     </div>
   );
 }
