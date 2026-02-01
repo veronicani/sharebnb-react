@@ -14,7 +14,7 @@ jest.mock("./pages/AddProperty/AddPropertyPage", () => {
   };
 });
 
-describe("RoutesList Component", () => {
+describe("RoutesList Test", () => {
   const mockProps = {
     properties: [],
     addProperty: jest.fn(),
