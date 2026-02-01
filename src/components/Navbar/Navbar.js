@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.scss"
 
-import { ReactComponent as SharebnbLogo } from "./sharebnb-logo-text-color.svg";
+import { ReactComponent as SharebnbLogo } from "../../images/sharebnb-logo-text-color.svg";
 
 /** Navbar for ShareBnb. 
  * 

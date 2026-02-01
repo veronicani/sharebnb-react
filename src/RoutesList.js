@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, BrowserRouter, Route, Routes } from 'react-router-dom';
-import PropertiesPage from './PropertiesPage';
-import AddPropertyForm from './AddPropertyForm';
+import PropertiesPage from './pages/PropertiesPage/PropertiesPage';
+import AddPropertyPage from './pages/AddPropertyPage/AddPropertyPage';
 
 /** Routes for ShareBnB.
  *
@@ -13,7 +13,7 @@ import AddPropertyForm from './AddPropertyForm';
  *
  * - State: none
  *
- * App -> RoutesList -> { PropertiesPage, AddPropertyForm }
+ * App -> RoutesList -> { PropertiesPage, AddPropertyPage }
 */
 
 function RoutesList({ properties, addProperty, search }) {
@@ -28,7 +28,7 @@ function RoutesList({ properties, addProperty, search }) {
           />}
         />
         <Route path="/add-property" element={
-          <AddPropertyForm
+          <AddPropertyPage
             addProperty={addProperty}
           />}
         />

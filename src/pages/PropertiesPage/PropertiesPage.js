@@ -1,5 +1,5 @@
-import PropertyCard from "./PropertyCard";
-import SearchForm from "./SearchForm";
+import PropertyCard from "../../components/PropertyCard/PropertyCard";
+import SearchForm from "../../components/SearchForm/SearchForm";
 
 /** Display all properties.
  *

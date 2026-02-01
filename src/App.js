@@ -1,12 +1,12 @@
 import './App.scss';
-import ShareBnB from './api';
+import ShareBnB from './services/api';
 import { useState, useEffect } from "react";
 import { BrowserRouter } from 'react-router-dom';
 
 import RoutesList from './RoutesList';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Loader from './Loader';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Loader from './components/Loader/Loader';
 
 /** App for ShareBnB.
  *

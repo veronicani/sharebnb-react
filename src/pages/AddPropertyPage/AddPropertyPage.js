@@ -1,8 +1,8 @@
-import "./AddPropertyForm.scss";
+import "./AddPropertyPage.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Button from "./Button";
+import Button from "../../components/Button/Button";
 
 const INITIAL_FORM_DATA = {
   name: "",
@@ -22,10 +22,10 @@ const INITIAL_FORM_DATA = {
  * - formData
  * - file: image upload for property.
  *
- * RoutesList -> AddPropertyForm
+ * RoutesList -> AddPropertyPage
  */
 
-function AddPropertyForm({ addProperty }) {
+function AddPropertyPage({ addProperty }) {
   const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [file, setFile] = useState(null);
 
@@ -59,7 +59,7 @@ function AddPropertyForm({ addProperty }) {
   }
 
   return (
-    <div className="AddPropertyForm">
+    <div className="AddPropertyPage">
       <div className="container col-md-8 col-lg-6">
         <h3>Add your backyard or pool!</h3>
         <div className="card">
@@ -158,4 +158,4 @@ function AddPropertyForm({ addProperty }) {
   );
 }
 
-export default AddPropertyForm;
+export default AddPropertyPage;
