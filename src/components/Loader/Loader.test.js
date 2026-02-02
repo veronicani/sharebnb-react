@@ -1,8 +1,8 @@
-import { render } from '@testing-library/react';
+import render from '@testing-library/react';
 import Loader from './Loader';
 
 describe('Loader', () => {
-  it('renders without crashing', () => {
-    // TODO: Add tests
+  test('renders without crashing', () => {
+    render(<Loader />);
   });
 });
