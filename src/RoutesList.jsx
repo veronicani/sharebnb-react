@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import PropertiesPage from './pages/Properties/PropertiesPage';
 import AddPropertyPage from './pages/AddProperty/AddPropertyPage';
 

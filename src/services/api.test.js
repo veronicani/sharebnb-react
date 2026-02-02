@@ -38,7 +38,7 @@ describe('ShareBnB API Test', () => {
       const mockFile = new File(['data'], 'cabin.jpg', { type: 'image/jpeg' });
       const mockFields = { name: 'Lake Cabin', price: 150 };
       const result = await ShareBnB.addProperty(mockFields, mockFile);
-      const [url, options] = fetchSpy.mock.calls[0];
+      const [, options] = fetchSpy.mock.calls[0];
       
       expect(options.method).toBe('POST');
       expect(options.body).toBeInstanceOf(FormData);
