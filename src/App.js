@@ -1,4 +1,3 @@
-import './App.scss';
 import ShareBnB from './services/api';
 import { useState, useEffect } from "react";
 import { BrowserRouter } from 'react-router-dom';
