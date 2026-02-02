@@ -22,7 +22,7 @@
   <br/>
 
   <p align="center">
-    Tired of indoor game nights, Netflux watch parties, but not <i>that</i> interested in camping / glamping / 5-hour hiking through the woods with your friends? Planning a birthday bash, a family reunion, a yoga retreat, and your 500sq.ft apartment isn't making the cut? Look no further than Sharebnb, where we connect backyard oases(ises?)🏕️ and sparkly cerulean pools🏝️ with eager guests looking to plan their next mildly-outdoor getaway!
+    Tired of indoor game nights, Netflix watch parties, but not <i>that</i> interested in camping / glamping / 5-hour hiking through the woods with your friends? Planning a birthday bash, a family reunion, a yoga retreat, and your 500sq.ft apartment isn't making the cut? Look no further than Sharebnb, where we connect backyard oases(ises?)🏕️ and sparkly cerulean pools🏝️ with eager guests looking to plan their next mildly-outdoor getaway!
     <br />
     <a href="https://sharebnb.veronicani.dev">View Demo ▶️</a>
     ·
@@ -152,9 +152,9 @@ To get a local copy up and running, please follow these steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Build MVP front end homepage
-- [ ] Implement search feature
-- [ ] Add test suite for implemented features
+- [x] Build MVP front end homepage
+- [x] Implement search feature
+- [x] Add test suite for implemented features
 - [ ] Implement user authentication & authorization
     - [ ] Signup Form
     - [ ] Login Form
