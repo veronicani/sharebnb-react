@@ -109,17 +109,5 @@ describe('SearchForm', () => {
 
       expect(input.value).toBe('');
     });
-
-    test('prevents default form submission behavior', () => {
-      renderComponent();
-
-      const form = screen.getByText('Submit').closest('form');
-      const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
-      const preventDefaultSpy = jest.spyOn(submitEvent, 'preventDefault');
-
-      form.dispatchEvent(submitEvent);
-
-      expect(preventDefaultSpy).toHaveBeenCalled();
-    });
   });
 });

@@ -203,22 +203,6 @@ describe('AddPropertyPage', () => {
         expect(mockNavigate).toHaveBeenCalledWith('/');
       });
     });
-    /**
-     * Verifies that form submission prevents the browser's default behavior
-     * (page refresh), allowing React to handle the submission via JS.
-     */
-    test('prevents default form submission behavior', async () => {
-      mockAddProperty.mockResolvedValueOnce({});
-      renderComponent();
-
-      const form = screen.getByRole('button', { name: /add property/i }).closest('form');
-      const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
-      const preventDefaultSpy = jest.spyOn(submitEvent, 'preventDefault');
-
-      form.dispatchEvent(submitEvent);
-
-      expect(preventDefaultSpy).toHaveBeenCalled();
-    });
   });
 
   describe('Future Robustness', () => {

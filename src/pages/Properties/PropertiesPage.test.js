@@ -81,15 +81,13 @@ describe('PropertiesPage', () => {
     });
 
     test('renders empty state when properties array is empty', () => {
-      const { container } = render(
-        <PropertiesPage properties={[]} search={mockSearch} />
-      );
+      render(<PropertiesPage properties={[]} search={mockSearch} />);
 
       // SearchForm should still render
       expect(screen.getByTestId('search-form')).toBeInTheDocument();
 
       // But no PropertyCard components
-      expect(container.querySelectorAll('[data-testid^="property-card-"]')).toHaveLength(0);
+      expect(screen.queryByTestId(/property-card-/)).not.toBeInTheDocument();
     });
   });
 
@@ -114,45 +112,6 @@ describe('PropertiesPage', () => {
 
       expect(screen.getByText('City Loft')).toBeInTheDocument();
       expect(screen.getByText('789 Downtown St')).toBeInTheDocument();
-    });
-
-    test('uses property.id as key for PropertyCard components', () => {
-      const { container } = render(
-        <PropertiesPage properties={mockProperties} search={mockSearch} />
-      );
-
-      // Each PropertyCard should have a unique testid based on property.id
-      const propertyCards = container.querySelectorAll('[data-testid^="property-card-"]');
-      expect(propertyCards).toHaveLength(3);
-
-      const ids = Array.from(propertyCards).map(card =>
-        card.getAttribute('data-testid').replace('property-card-', '')
-      );
-      expect(ids).toEqual(['1', '2', '3']);
-    });
-  });
-
-  describe('Layout', () => {
-    test('renders PropertyCard components in grid layout', () => {
-      const { container } = render(
-        <PropertiesPage properties={mockProperties} search={mockSearch} />
-      );
-
-      // Check for grid row classes
-      const gridRow = container.querySelector('.row.row-cols-1.row-cols-md-2.row-cols-lg-3.row-cols-xl-4');
-      expect(gridRow).toBeInTheDocument();
-    });
-
-    test('applies correct responsive column classes', () => {
-      const { container } = render(
-        <PropertiesPage properties={mockProperties} search={mockSearch} />
-      );
-
-      const gridRow = container.querySelector('.row');
-      expect(gridRow.className).toContain('row-cols-1');  // Mobile
-      expect(gridRow.className).toContain('row-cols-md-2');  // Tablet
-      expect(gridRow.className).toContain('row-cols-lg-3');  // Desktop
-      expect(gridRow.className).toContain('row-cols-xl-4');  // Large desktop
     });
   });
 

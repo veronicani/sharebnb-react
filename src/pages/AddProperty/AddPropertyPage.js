@@ -66,8 +66,9 @@ function AddPropertyPage({ addProperty }) {
           <div className="card-body">
             <form method="POST" encType="multipart/form-data">
               <div className="mb-3">
-                <label className="form-label">Property Name</label>
+                <label htmlFor="name" className="form-label">Property Name</label>
                 <input
+                  id="name"
                   name="name"
                   className="form-control"
                   value={formData.name}
@@ -75,8 +76,9 @@ function AddPropertyPage({ addProperty }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">Address</label>
+                <label htmlFor="address" className="form-label">Address</label>
                 <input
+                  id="address"
                   name="address"
                   className="form-control"
                   value={formData.address}
@@ -84,8 +86,9 @@ function AddPropertyPage({ addProperty }) {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">Description</label>
+                <label htmlFor="description" className="form-label">Description</label>
                 <textarea
+                  id="description"
                   name="description"
                   className="form-control"
                   value={formData.description}
@@ -94,8 +97,9 @@ function AddPropertyPage({ addProperty }) {
                 ></textarea>
               </div>
               <div className="mb-3">
-                <label className="form-label">Price</label>
+                <label htmlFor="price" className="form-label">Price</label>
                 <input
+                  id="price"
                   type="number"
                   name="price"
                   className="form-control"
@@ -105,27 +109,30 @@ function AddPropertyPage({ addProperty }) {
               </div>
               <div className="mb-3">
                 <input
+                  id="backyard"
                   type="checkbox"
                   name="backyard"
                   className="form-check-input"
                   value={formData.backyard}
                   onChange={handleCheckBoxChange}
                 />
-                <label className="form-check-label ms-2">Backyard</label>
+                <label htmlFor="backyard" className="form-check-label ms-2">Backyard</label>
               </div>
               <div className="mb-3">
                 <input
+                  id="pool"
                   type="checkbox"
                   name="pool"
                   className="form-check-input"
                   value={formData.pool}
                   onChange={handleCheckBoxChange}
                 />
-                <label className="form-check-label ms-2">Pool</label>
+                <label htmlFor="pool" className="form-check-label ms-2">Pool</label>
               </div>
               <div className="mb-3">
-                <label className="form-label">Image</label>
+                <label htmlFor="image" className="form-label">Image</label>
                 <input
+                  id="image"
                   type="file"
                   name="image"
                   className="form-control"
