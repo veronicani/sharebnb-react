@@ -64,7 +64,7 @@ function AddPropertyPage({ addProperty }) {
         <h3>Add your backyard or pool!</h3>
         <div className="card">
           <div className="card-body">
-            <form method="POST" encType="multipart/form-data">
+            <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data">
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">Property Name</label>
                 <input

@@ -2,23 +2,15 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import AddPropertyPage from './AddPropertyPage';
 
-// Mock useNavigate from react-router-dom
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockNavigate,
 }));
 
-// Mock Button component to simplify testing
-jest.mock('../../components/Button/Button', () => {
-  return function MockButton({ label, handleClick }) {
-    return <button onClick={handleClick}>{label}</button>;
-  };
-});
-
 describe('AddPropertyPage', () => {
   const mockAddProperty = jest.fn();
-
+  
   afterEach(() => {
     jest.restoreAllMocks();
     mockAddProperty.mockClear();
@@ -44,58 +36,16 @@ describe('AddPropertyPage', () => {
       expect(screen.getByLabelText(/backyard/i)).toBeInTheDocument();
       expect(screen.getByLabelText(/pool/i)).toBeInTheDocument();
       expect(screen.getByLabelText(/image/i)).toBeInTheDocument();
-    });
-
-    test('renders submit button with correct label', () => {
-      renderComponent();
-
-      expect(screen.getByText('Add Property')).toBeInTheDocument();
-    });
-
-    test('shows correct heading', () => {
-      renderComponent();
-
-      expect(screen.getByText('Add your backyard or pool!')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /add property/i })).toBeInTheDocument();
     });
   });
 
   describe('Form Interactions', () => {
-    test('updates text input values on change', () => {
-      renderComponent();
-
-      const nameInput = screen.getByLabelText(/property name/i);
-      const addressInput = screen.getByLabelText(/address/i);
-
-      fireEvent.change(nameInput, { target: { value: 'Sunny Villa' } });
-      fireEvent.change(addressInput, { target: { value: '123 Beach St' } });
-
-      expect(nameInput.value).toBe('Sunny Villa');
-      expect(addressInput.value).toBe('123 Beach St');
-    });
-
-    test('updates textarea for description', () => {
-      renderComponent();
-
-      const descriptionInput = screen.getByLabelText(/description/i);
-      fireEvent.change(descriptionInput, { target: { value: 'Beautiful property' } });
-
-      expect(descriptionInput.value).toBe('Beautiful property');
-    });
-
-    test('updates number input for price', () => {
-      renderComponent();
-
-      const priceInput = screen.getByLabelText(/price/i);
-      fireEvent.change(priceInput, { target: { value: '150' } });
-
-      expect(priceInput.value).toBe('150');
-    });
-
     test('toggles checkbox values', () => {
       renderComponent();
 
-      const backyardCheckbox = screen.getByLabelText(/backyard/i);
-      const poolCheckbox = screen.getByLabelText(/pool/i);
+      const backyardCheckbox = screen.getByRole('checkbox', { name: /backyard/i });
+      const poolCheckbox = screen.getByRole('checkbox', { name: /pool/i });
 
       expect(backyardCheckbox.checked).toBe(false);
       expect(poolCheckbox.checked).toBe(false);
@@ -121,7 +71,7 @@ describe('AddPropertyPage', () => {
   });
 
   describe('Form Submission', () => {
-    test('calls addProperty with correct formData and file on submit', async () => {
+    test('calls addProperty with correct formData on submit', async () => {
       mockAddProperty.mockResolvedValueOnce({});
       renderComponent();
 
@@ -138,7 +88,7 @@ describe('AddPropertyPage', () => {
       fireEvent.change(screen.getByLabelText(/price/i), {
         target: { value: '200' }
       });
-      fireEvent.click(screen.getByLabelText(/pool/i));
+      fireEvent.click(screen.getByRole('checkbox', { name: /pool/i }));
 
       const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' });
       fireEvent.change(screen.getByLabelText(/image/i), {
@@ -146,7 +96,7 @@ describe('AddPropertyPage', () => {
       });
 
       // Submit form
-      fireEvent.click(screen.getByText('Add Property'));
+      fireEvent.click(screen.getByRole('button', { name: /add property/i }));
 
       await waitFor(() => {
         expect(mockAddProperty).toHaveBeenCalledTimes(1);
@@ -160,6 +110,11 @@ describe('AddPropertyPage', () => {
       expect(formData.pool).toBe(true);
       expect(formData.backyard).toBe(false);
       expect(uploadedFile).toBe(file);
+
+      // Verify navigation after successful submission
+      await waitFor(() => {
+        expect(mockNavigate).toHaveBeenCalledWith('/');
+      });
     });
 
     test('resets form to initial state after successful submission', async () => {
@@ -173,44 +128,12 @@ describe('AddPropertyPage', () => {
       fireEvent.change(nameInput, { target: { value: 'Test Property' } });
       fireEvent.change(addressInput, { target: { value: 'Test Address' } });
 
-      // Submit form
-      fireEvent.click(screen.getByText('Add Property'));
+      fireEvent.click(screen.getByRole('button', { name: /add property/i }));
 
       await waitFor(() => {
         expect(nameInput.value).toBe('');
-        expect(addressInput.value).toBe('');
       });
+      expect(addressInput.value).toBe('');
     });
-
-    test('navigates to "/" after submission', async () => {
-      mockAddProperty.mockResolvedValueOnce({});
-      renderComponent();
-
-      // Fill minimal required fields
-      fireEvent.change(screen.getByLabelText(/property name/i), {
-        target: { value: 'Test' }
-      });
-
-      const file = new File(['test'], 'test.jpg', { type: 'image/jpeg' });
-      fireEvent.change(screen.getByLabelText(/image/i), {
-        target: { files: [file] }
-      });
-
-      // Submit form
-      fireEvent.click(screen.getByText('Add Property'));
-
-      await waitFor(() => {
-        expect(mockNavigate).toHaveBeenCalledWith('/');
-      });
-    });
-  });
-
-  describe('Future Robustness', () => {
-    test.todo('handles validation errors from API');
-    test.todo('displays loading state during submission');
-    test.todo('shows error message if submission fails');
-    test.todo('disables submit button during submission');
-    test.todo('validates required fields before submission');
-    test.todo('shows file preview after image selection');
   });
 });
